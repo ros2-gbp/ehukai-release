@@ -1,0 +1,13 @@
+Source: ros-lyrical-ehukai
+Section: misc
+Priority: optional
+Maintainer: "Honu Robotics" <info@honurobotics.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, libeigen3-dev, libimath-dev, libtbb-dev, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/ehukai/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-ehukai
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, libimath-dev, libtbb-dev, ros-lyrical-ros-workspace
+Description: Headless spectral ocean-wave synthesis library: TMA/JONSWAP/Pierson-Moskowitz spectra with directional spreading and dispersion, after Horvath (2015).
+ Exports the ehukai::ehukai CMake target. This manifest exists so the library can be developed as a peer of its consumers in a colcon workspace. It is a plain CMake package — colcon does not change how it is configured, built or installed, and it is not a ROS package in any other sense. The Debian packaging (cmake/Packaging.cmake) and a standalone cmake build are unaffected.
